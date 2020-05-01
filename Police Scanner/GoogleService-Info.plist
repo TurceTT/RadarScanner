@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1026755721677-c2bep37v11hil38821p76teeel3jko7q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1026755721677-c2bep37v11hil38821p76teeel3jko7q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDMGfn8TP8_n7b0kqfLCv1md6iZLa5AUs4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1026755721677</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.eminademi.Police-Scanner</string>
+	<key>PROJECT_ID</key>
+	<string>police-scanner-bf877</string>
+	<key>STORAGE_BUCKET</key>
+	<string>police-scanner-bf877.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1026755721677:ios:2a7fc49ff4e2f5ba</string>
+	<key>DATABASE_URL</key>
+	<string>https://police-scanner-bf877.firebaseio.com</string>
+</dict>
+</plist>

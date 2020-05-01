@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Police_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-UB-1CI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="724"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uJt-wT-jY4" appends="YES" id="OXp-Xv-OKp"/>
+                                    <outletCollection property="gestureRecognizers" destination="0lN-Sq-86H" appends="YES" id="Gja-NP-9R1"/>
+                                </connections>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PJk-3F-Qt1">
+                                <rect key="frame" x="6" y="780" width="402" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smK-MJ-udz">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fd8-p8-7or"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jT-1s-8Vc">
+                                        <rect key="frame" x="204" y="0.0" width="198" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Radar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="annotationPointPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGu-TX-zCy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="IBD-5R-lap"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-e1-2mo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="724"/>
+                                <connections>
+                                    <action selector="mapButton:" destination="BYZ-38-t0r" eventType="touchDown" id="7Rq-6z-gnd"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3Vt-KA-Dnh">
+                                <rect key="frame" x="358" y="50" width="50" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0F-Wm-eCT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="soundButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7E-8A-x0p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F8J-BE-Ame"/>
+                                    <constraint firstAttribute="width" constant="50" id="hwr-O3-Jck"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PJk-3F-Qt1" secondAttribute="trailing" constant="6" id="343-99-tef"/>
+                            <constraint firstItem="AFv-e1-2mo" firstAttribute="trailing" secondItem="Ct6-UB-1CI" secondAttribute="trailing" id="7T5-Ld-ZKM"/>
+                            <constraint firstItem="PJk-3F-Qt1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="GEO-cd-8xu"/>
+                            <constraint firstItem="AFv-e1-2mo" firstAttribute="top" secondItem="Ct6-UB-1CI" secondAttribute="top" id="HmO-ay-rtA"/>
+                            <constraint firstItem="Ct6-UB-1CI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LQ2-L9-CU5"/>
+                            <constraint firstItem="3Vt-KA-Dnh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="Msj-YP-MaF"/>
+                            <constraint firstItem="Ct6-UB-1CI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TkL-r6-gBF"/>
+                            <constraint firstItem="AFv-e1-2mo" firstAttribute="height" secondItem="Ct6-UB-1CI" secondAttribute="height" id="YtB-2l-zxl"/>
+                            <constraint firstItem="AFv-e1-2mo" firstAttribute="width" secondItem="Ct6-UB-1CI" secondAttribute="width" id="afn-ds-IFZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PJk-3F-Qt1" secondAttribute="bottom" constant="12" id="jR2-Dg-PGT"/>
+                            <constraint firstItem="Ct6-UB-1CI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lOg-KB-pmo"/>
+                            <constraint firstItem="AFv-e1-2mo" firstAttribute="leading" secondItem="Ct6-UB-1CI" secondAttribute="leading" id="lYZ-SN-Tn2"/>
+                            <constraint firstItem="3Vt-KA-Dnh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-6" id="uVk-zm-df6"/>
+                            <constraint firstItem="PJk-3F-Qt1" firstAttribute="top" secondItem="Ct6-UB-1CI" secondAttribute="bottom" constant="12" id="vpV-y1-Jlj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="Cg4-7b-pEX"/>
+                        <outlet property="buttonOne" destination="O0F-Wm-eCT" id="jU6-qE-kWH"/>
+                        <outlet property="dismissTracking" destination="AFv-e1-2mo" id="l6u-4y-8SO"/>
+                        <outlet property="mapView" destination="Ct6-UB-1CI" id="l83-o7-c3g"/>
+                        <outlet property="radarButton" destination="0jT-1s-8Vc" id="Juu-ae-Bj2"/>
+                        <outlet property="resetButton" destination="smK-MJ-udz" id="LpS-yW-qvl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uJt-wT-jY4">
+                    <connections>
+                        <action selector="panRecognized:" destination="BYZ-38-t0r" id="gg9-9a-1a0"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="0lN-Sq-86H">
+                    <connections>
+                        <action selector="longGesturePressed:" destination="BYZ-38-t0r" id="vzL-Eb-dEK"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
