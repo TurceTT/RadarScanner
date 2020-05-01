@@ -10,4 +10,4 @@ Sounds can be enabled and disabled.
 
 App Screanshots
 
-![screenshot1](appScreenshots\screenshot1.png)
+![screenshot1](appScreenshots/screenshot1.png)
